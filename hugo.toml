@@ -18,7 +18,7 @@ refLinksErrorLevel = 'WARNING'
   showAuthor = true
   [params.author]
     name = 'spp'
-    email = 'sun.april.moon@gmail.com'
+    email = 'sun.april.moon at gmail.com'
     # github = 'sergeyklay'
     # twitter = 'egreps'
     location = 'nowhere'
