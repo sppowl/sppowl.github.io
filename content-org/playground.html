@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-16 Sun 16:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Playground</title>
+<meta name="author" content="宋四月" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <style>
+          /* From: https://endlessparentheses.com/public/css/endless.css */
+          /* See also: https://meta.superuser.com/questions/4788/css-for-the-new-kbd-style */
+          kbd
+          {
+            -moz-border-radius: 6px;
+            -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            -webkit-border-radius: 6px;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            color: #333;
+            display: inline-block;
+            font-family: 'Droid Sans Mono', monospace;
+            font-size: 80%;
+            font-weight: normal;
+            line-height: inherit;
+            margin: 0 .1em;
+            padding: .08em .4em;
+            text-shadow: 0 1px 0 #fff;
+            word-spacing: -4px;
+        
+            box-shadow: 2px 2px 2px #222; /* MA: An extra I've added. */
+          }
+          </style>
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/tooltipster.bundle.min.css"/>
+        
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css" />
+        
+          <script type="text/javascript">
+              if (typeof jQuery == 'undefined') {
+                  document.write(unescape('%3Cscript src="https://code.jquery.com/jquery-1.10.0.min.js"%3E%3C/script%3E'));
+              }
+          </script>
+        
+           <script type="text/javascript"            src="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+        
+            <script>
+                   $(document).ready(function() {
+                       $('.tooltip').tooltipster({
+                           theme: 'tooltipster-punk',
+                           contentAsHTML: true,
+                           animation: 'grow',
+                           delay: [100,500],
+                           // trigger: 'click'
+                           trigger: 'custom',
+                           triggerOpen: {
+                               mouseenter: true
+                           },
+                           triggerClose: {
+                               originClick: true,
+                               scroll: true
+                           }
+           });
+                   });
+               </script>
+        
+          <style>
+             abbr {color: red;}
+        
+             .tooltip { border-bottom: 1px dotted #000;
+                        color:red;
+                        text-decoration: none;}
+          </style>
+          
+          <style>
+          /* From: https://endlessparentheses.com/public/css/endless.css */
+          /* See also: https://meta.superuser.com/questions/4788/css-for-the-new-kbd-style */
+          kbd
+          {
+            -moz-border-radius: 6px;
+            -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            -webkit-border-radius: 6px;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            color: #333;
+            display: inline-block;
+            font-family: 'Droid Sans Mono', monospace;
+            font-size: 80%;
+            font-weight: normal;
+            line-height: inherit;
+            margin: 0 .1em;
+            padding: .08em .4em;
+            text-shadow: 0 1px 0 #fff;
+            word-spacing: -4px;
+        
+            box-shadow: 2px 2px 2px #222; /* MA: An extra I've added. */
+          }
+          </style>
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/tooltipster.bundle.min.css"/>
+        
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css" />
+        
+          <script type="text/javascript">
+              if (typeof jQuery == 'undefined') {
+                  document.write(unescape('%3Cscript src="https://code.jquery.com/jquery-1.10.0.min.js"%3E%3C/script%3E'));
+              }
+          </script>
+        
+           <script type="text/javascript"            src="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+        
+            <script>
+                   $(document).ready(function() {
+                       $('.tooltip').tooltipster({
+                           theme: 'tooltipster-punk',
+                           contentAsHTML: true,
+                           animation: 'grow',
+                           delay: [100,500],
+                           // trigger: 'click'
+                           trigger: 'custom',
+                           triggerOpen: {
+                               mouseenter: true
+                           },
+                           triggerClose: {
+                               originClick: true,
+                               scroll: true
+                           }
+           });
+                   });
+               </script>
+        
+          <style>
+             abbr {color: red;}
+        
+             .tooltip { border-bottom: 1px dotted #000;
+                        color:red;
+                        text-decoration: none;}
+          </style>
+          
+          <style>
+          /* From: https://endlessparentheses.com/public/css/endless.css */
+          /* See also: https://meta.superuser.com/questions/4788/css-for-the-new-kbd-style */
+          kbd
+          {
+            -moz-border-radius: 6px;
+            -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            -webkit-border-radius: 6px;
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+            color: #333;
+            display: inline-block;
+            font-family: 'Droid Sans Mono', monospace;
+            font-size: 80%;
+            font-weight: normal;
+            line-height: inherit;
+            margin: 0 .1em;
+            padding: .08em .4em;
+            text-shadow: 0 1px 0 #fff;
+            word-spacing: -4px;
+        
+            box-shadow: 2px 2px 2px #222; /* MA: An extra I've added. */
+          }
+          </style>
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/tooltipster.bundle.min.css"/>
+        
+          <link rel="stylesheet" type="text/css" href="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css" />
+        
+          <script type="text/javascript">
+              if (typeof jQuery == 'undefined') {
+                  document.write(unescape('%3Cscript src="https://code.jquery.com/jquery-1.10.0.min.js"%3E%3C/script%3E'));
+              }
+          </script>
+        
+           <script type="text/javascript"            src="https://alhassy.github.io/org-special-block-extras/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+        
+            <script>
+                   $(document).ready(function() {
+                       $('.tooltip').tooltipster({
+                           theme: 'tooltipster-punk',
+                           contentAsHTML: true,
+                           animation: 'grow',
+                           delay: [100,500],
+                           // trigger: 'click'
+                           trigger: 'custom',
+                           triggerOpen: {
+                               mouseenter: true
+                           },
+                           triggerClose: {
+                               originClick: true,
+                               scroll: true
+                           }
+           });
+                   });
+               </script>
+        
+          <style>
+             abbr {color: red;}
+        
+             .tooltip { border-bottom: 1px dotted #000;
+                        color:red;
+                        text-decoration: none;}
+          </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Playground</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6957910">Another Heading</a></li>
+<li><a href="#org569d5ce">Gen a 3x3 latex matrix, filled with random formulas, not too small</a></li>
+<li><a href="#org899fc60">Headiing2</a></li>
+<li><a href="#orgd5d120f">Gen 5x6 random org table below</a></li>
+<li><a href="#orga12b23e">Gen 5x6 random org table below</a></li>
+<li><a href="#org59087ef">Gnuplot Example</a></li>
+<li><a href="#org317dfb8">Gen random inline latex formulas below</a></li>
+<li><a href="#org3af4562">Generate a 5x8 latex matrix non-inlined below, filled with random numbers and letters</a></li>
+<li><a href="#orgc857b85">Org Table Plot</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6957910" class="outline-2">
+<h2 id="org6957910">Another Heading</h2>
+<div class="outline-text-2" id="text-org6957910">
+<pre class="example" id="orgd29289b">
+block belongs to head
+</pre>
+
+<dl class="org-dl">
+<dt>item2</dt><dd>level1
+<ul class="org-ul">
+<li><p>
+nested
+</p>
+<div class="org-src-container">
+<pre class="src src-python" id="org19e1394"><span style="color: #51afef;">def</span> <span style="color: #5cEfFF;">test</span>():
+    <span style="color: #C57BDB;">print</span>(<span style="color: #7bc275;">"test"</span>)
+<span style="color: #C57BDB;">print</span>(<span style="color: #7bc275;">"???"</span>)
+test()
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #C57BDB;">print</span>(<span style="color: #7bc275;">"another print"</span>)
+</pre>
+</div></li>
+</ul></dd>
+
+<dt>head4</dt><dd><p>
+4
+</p>
+<pre class="example" id="org72473cc">
+block inline of list item
+</pre></dd>
+
+<dt>head5</dt><dd>5</dd>
+<dt>it</dt><dd>?</dd>
+<dt>item3</dt><dd>3</dd>
+<dt>item6</dt><dd><p>
+this is six-th item
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #C57BDB;">print</span>(<span style="color: #7bc275;">"..."</span>)
+</pre>
+</div>
+
+<pre class="example">
+...
+</pre></dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org569d5ce" class="outline-2">
+<h2 id="org569d5ce">Gen a 3x3 latex matrix, filled with random formulas, not too small</h2>
+<div class="outline-text-2" id="text-org569d5ce">
+<p>
+Here is a 3x3 LaTeX matrix filled with random formulas:
+</p>
+
+\begin{bmatrix}
+x^2 + y^2 & \sin(\theta) & e^{\pi i} + 1 \\
+\log(a + b) & \frac{c}{d} & \sqrt{n^2 + m^2} \\
+\tan(x) & \int_0^1 x \, dx & \sum_{i=1}^{n} i^2
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-org899fc60" class="outline-2">
+<h2 id="org899fc60">Headiing2</h2>
+<div class="outline-text-2" id="text-org899fc60">
+<p>
+special symbols: &pi; &alpha;
+</p>
+
+<p>
+This is a inline src block <code>hello inline shell block</code>.
+This is a inline python<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> inline block <code>Inline python print output</code>
+below is a shell src block.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell" id="org1e35e67"><span style="color: #FCCE7B;">echo</span> <span style="color: #C57BDB; font-weight: bold;">`basename $fname`</span>
+</pre>
+</div>
+
+<pre class="example">
+playground.org
+</pre>
+
+
+
+
+<p>
+And I can refer &rsquo;to its output like this: <code>arg</code> and something else&rsquo;
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5d120f" class="outline-2">
+<h2 id="orgd5d120f">Gen 5x6 random org table below</h2>
+<div class="outline-text-2" id="text-orgd5d120f">
+<p>
+Here’s a 5x6 table filled with random numbers:
+</p>
+
+<table id="orgdb51ddb" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Random Table1</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">1</th>
+<th scope="col" class="org-right">2</th>
+<th scope="col" class="org-right">3</th>
+<th scope="col" class="org-right">4xx</th>
+<th scope="col" class="org-right">5</th>
+<th scope="col" class="org-right">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">12</td>
+<td class="org-right">45</td>
+<td class="org-right">23</td>
+<td class="org-right">67</td>
+<td class="org-right">34</td>
+<td class="org-right">89</td>
+</tr>
+
+<tr>
+<td class="org-right">68</td>
+<td class="org-right">29</td>
+<td class="org-right">51</td>
+<td class="org-right">74</td>
+<td class="org-right">16</td>
+<td class="org-right">83</td>
+</tr>
+
+<tr>
+<td class="org-right">91</td>
+<td class="org-right">22</td>
+<td class="org-right">37</td>
+<td class="org-right">54</td>
+<td class="org-right">18</td>
+<td class="org-right">76</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-right">60</td>
+<td class="org-right">33</td>
+<td class="org-right">48</td>
+<td class="org-right">25</td>
+<td class="org-right">92</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-right">78</td>
+<td class="org-right">41</td>
+<td class="org-right">57</td>
+<td class="org-right">84</td>
+<td class="org-right">39</td>
+</tr>
+</tbody>
+</table>
+
+
+<div id="orge07ad32" class="figure">
+<p><img src="file:///Users/owl/org/.attach/50/b3c23f-4834-4ffd-a8c9-98fd748a6744/_20250316_104150screenshot.png" alt="_20250316_104150screenshot.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>reformat-org-pic1</p>
+</div>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2026-04-01 Wed&gt;</span></span>
+</p>
+
+<hr />
+
+<div class="org-src-container">
+<pre class="src src-rust" id="org608d7db"><span id="coderef-print1" class="coderef-off"><span style="color: #C57BDB;">println!</span><span style="color: #51afef;">(</span><span style="color: #7bc275;">"</span><span style="color: #7bc275; font-style: italic;">{:?}</span><span style="color: #7bc275;">"</span>, <span style="color: #e69055; font-weight: bold;">1</span>..<span style="color: #e69055; font-weight: bold;">10</span><span style="color: #51afef;">)</span> (print1)</span>
+</pre>
+</div>
+
+<pre class="example">
+1..10
+</pre>
+
+
+
+
+
+
+<p>
+In the line <a href="#coderef-print1" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-print1');" onmouseout="CodeHighlightOff(this, 'coderef-print1');">print1</a> we printed a 1.
+</p>
+
+<p>
+sdfsdfj: <code>???</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orga12b23e" class="outline-2">
+<h2 id="orga12b23e">Gen 5x6 random org table below</h2>
+<div class="outline-text-2" id="text-orga12b23e">
+<p>
+Here&rsquo;s a 5x6 random Org table:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>numbers2</label><pre class="src src-org" id="org4ac35f6"><span style="color: #a991f1;">| Col1 | Col2 | Col3 | Col4 | Col5 | Col6 |</span>
+<span style="color: #a991f1;">|------|------|------|------|------|------|</span>
+<span style="color: #a991f1;">| 42   | 17   | 35   | 88   | 65   | 22   |</span>
+<span style="color: #a991f1;">| 10   | 58   | 49   | 71   | 34   | 70   |</span>
+<span style="color: #a991f1;">| 56   | 92   | 14   | 41   | 27   | 83   |</span>
+<span style="color: #a991f1;">| 69   | 31   | 94   | 88   | 21   | 65   |</span>
+<span style="color: #a991f1;">| 84   | 50   | 19   | 95   | 37   | 45   |</span>
+</pre>
+</div>
+
+<p>
+You can generate a new random table by running code in Emacs or manually changing the numbers.
+Run the above code in an Org buffer to generate a 5x3 random table. Adjust the <code>generate-random-org-table</code> function parameters as desired for different sizes.
+</p>
+</div>
+</div>
+<div id="outline-container-org59087ef" class="outline-2">
+<h2 id="org59087ef">Gnuplot Example</h2>
+<div class="outline-text-2" id="text-org59087ef">
+<table id="orgcc3b4fd" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> numbers1</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">y1</th>
+<th scope="col" class="org-right">y2</th>
+<th scope="col" class="org-left">xx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">[2025-03-16 Sun]</span></span></td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">4</td>
+<td class="org-right">7</td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2025-03-16 Sun&gt;</span></span></td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">5</td>
+<td class="org-right">8</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>plot-src</label><pre class="src src-gnuplot"><span style="color: #a991f1;">reset</span>
+
+<span style="color: #a991f1;">set</span> <span style="color: #FCCE7B;">title</span> <span style="color: #7bc275;">"Putting it All Together"</span>
+
+<span style="color: #a991f1;">set</span> xlabel <span style="color: #7bc275;">"X"</span>
+<span style="color: #a991f1;">set</span> xrange [<span style="color: #a991f1;">-8:8</span>]
+<span style="color: #a991f1;">set</span> xtics -8,2,8
+
+
+<span style="color: #a991f1;">set</span> ylabel <span style="color: #7bc275;">"Y"</span>
+<span style="color: #a991f1;">set</span> yrange [<span style="color: #a991f1;">-20:70</span>]
+<span style="color: #a991f1;">set</span> ytics -20,10,70
+
+<span style="color: #dcafe9;">f(x) =</span> x**2
+<span style="color: #dcafe9;">g(x) =</span> x**3
+<span style="color: #dcafe9;">h(x) =</span> 10*<span style="color: #5cEfFF;">sqrt</span>(<span style="color: #5cEfFF;">abs</span>(x))
+
+<span style="color: #51afef;">plot</span> f(x) w lp <span style="color: #FCCE7B;">lw</span> 1, g(x) w p <span style="color: #FCCE7B;">lw</span> 2, h(x) w l <span style="color: #FCCE7B;">lw</span> 3
+</pre>
+</div>
+
+
+<div id="org0bc969f" class="figure">
+<p><img src="example-gnuplot.png" alt="example-gnuplot.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org317dfb8" class="outline-2">
+<h2 id="org317dfb8">Gen random inline latex formulas below</h2>
+<div class="outline-text-2" id="text-org317dfb8">
+<p>
+Here are some random inline LaTeX formulas:
+</p>
+
+<ol class="org-ol">
+<li>\( E = mc^2 \)</li>
+<li>\( a^2 + b^2 = c^2 \)</li>
+<li>\( \int_0^{\infty} e^{-x} \, dx = 1 \)</li>
+<li>\( \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} \)</li>
+<li>\( \frac{d}{dx}(x^n) = nx^{n-1} \)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3af4562" class="outline-2">
+<h2 id="org3af4562">Generate a 5x8 latex matrix non-inlined below, filled with random numbers and letters</h2>
+<div class="outline-text-2" id="text-org3af4562">
+<p>
+Here is a 5x8 LaTeX matrix filled with random numbers and letters:
+</p>
+
+
+\begin{pmatrix}
+A & 3 & F & 7 & B & 9 & K & 4 \\
+2 & D & 1 & X & 8 & E & 5 & M \\
+Z & 6 & Y & C & 0 & 2 & J & 3 \\
+H & 4 & T & 8 & Q & 1 & L & 7 \\
+N & 9 & W & 5 & P & 6 & R & 0 \\
+\end{pmatrix}
+
+
+<p>
+You can copy and paste this code into your LaTeX document to render the matrix.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc857b85" class="outline-2">
+<h2 id="orgc857b85">Org Table Plot</h2>
+<div class="outline-text-2" id="text-orgc857b85">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sede</th>
+<th scope="col" class="org-right">Max cites</th>
+<th scope="col" class="org-right">H-index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Chile</td>
+<td class="org-right">257.72</td>
+<td class="org-right">21.39</td>
+</tr>
+
+<tr>
+<td class="org-left">Leeds</td>
+<td class="org-right">165.77</td>
+<td class="org-right">19.68</td>
+</tr>
+
+<tr>
+<td class="org-left">Sao Paolo</td>
+<td class="org-right">71.00</td>
+<td class="org-right">11.50</td>
+</tr>
+
+<tr>
+<td class="org-left">Stockholm</td>
+<td class="org-right">134.19</td>
+<td class="org-right">14.33</td>
+</tr>
+
+<tr>
+<td class="org-left">Morelia</td>
+<td class="org-right">257.56</td>
+<td class="org-right">17.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+A sad language.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-03-16 Sun 00:00</p>
+<p class="author">Author: 宋四月</p>
+<p class="date">Created: 2025-03-16 Sun 16:56</p>
+</div>
+</body>
+</html>

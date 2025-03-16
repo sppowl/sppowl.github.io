@@ -1,0 +1,27 @@
+#+title: All Posts
+#+date: <2025-03-16 Sun>
+
+#+hugo_base_dir: ../
+
+* DONE My first post :tag1:@category1:
+:PROPERTIES:
+:EXPORT_FILE_NAME: my-first-post
+:EXPORT_HUGO_LASTMOD: <2025-03-17 Mon>
+:END:
+This is my post body
+
+* DONE Contact
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: contact
+:END:
+WIP
+
+* About
+SCHEDULED: <2025-03-16 Sun>
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: about
+:END:
+
+🚧
