@@ -1,4 +1,5 @@
 #+title: Playground
+#+author: owl
 #+date: <2025-03-16 Sun>
 #+startup: indent
 #+startup: num
@@ -142,6 +143,8 @@ Another Inline shell code invode another block: src_shell[:noweb yes]{ echo <<fu
 * Gen 5x6 random org table below
 
 Here's a 5x6 random Org table:
+
+
 
 #+caption: numbers2
 #+name: org-block-table

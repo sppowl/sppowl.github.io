@@ -1,4 +1,5 @@
 #+title: All Posts
+#+author: owl
 #+date: <2025-03-16 Sun>
 
 #+hugo_base_dir: ../
