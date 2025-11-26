@@ -1,6 +1,6 @@
 +++
 title = "Contact"
-author = ["owl"]
+author = "owl"
 date = 2025-03-16T00:00:00+08:00
 draft = false
 +++

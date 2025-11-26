@@ -1,0 +1,15 @@
+
+    /* TEAM */
+
+    Author: spp
+    Contact: sun.april.moon at gmail.com
+    From: nowhere
+
+    /* SITE */
+
+    Last update: 2025/11/27
+    Language: English
+    Doctype: HTML5
+    Standards: HTML5, CSS3, Open Graph protocol, Schema.org
+    Components: Hugo, Ed Theme, Lunr.js
+    Hugo version: 0.152.2

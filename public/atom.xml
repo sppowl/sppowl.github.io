@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="https://example.org/">
+    <title>The Wall</title>
+    
+    <link href="/" rel="alternate" type="text/html" title="html" />
+    <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
+    <link href="/manifest.webmanifest" rel="alternate" type="application/manifest+json" title="manifest" />
+    <link href="/atom.xml" rel="self" type="text/xml" title="atom" />
+    <link href="/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
+    <link href="/index.json" rel="alternate" type="application/json" title="json" />
+    <link href="/humans.txt" rel="alternate" type="text/plain" title="humanstxt" />
+    <icon>https://example.org/img/open-graph-logo_hu_1978870e36bf97f6.png</icon>
+    <logo>https://example.org/img/open-graph-logo_hu_1978870e36bf97f6.png</logo>
+    <author>
+        <name>spp</name>
+        <email>sun.april.moon at gmail.com</email>
+    </author>
+    <generator uri="https://gohugo.io" version="0.152.2">Hugo</generator>
+    <updated>2025-03-17T00:00:00+08:00</updated>
+    <id>urn:uuid:166d9d91-1dbb-5419-d947-9900b2cb85e6</id>
+    <entry>
+        
+        <category term="posts" />
+        
+        <link rel="alternate" type="type/html" href="https://example.org/posts/playground/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[Playground]]></title>
+        
+        
+        
+        <published>2025-03-16T00:00:00+08:00</published>
+        <updated>2025-03-16T00:00:00+08:00</updated>
+        <id>urn:uuid:ac723c28-93d2-58e9-c931-0295974c1eea</id>
+        
+                <author>
+                    <name>owl</name>
+                </author>
+        
+        <summary type="html"><![CDATA[<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="/posts/playground/#another-heading">Another Heading</a></li>
+<li><a href="/posts/playground/#gen-a-3x3-latex-matrix-filled-with-random-formulas-not-too-small">Gen a 3x3 latex matrix, filled with random formulas, not too small</a></li>
+<li><a href="/posts/playground/#headiing2">Headiing2</a></li>
+<li><a href="/posts/playground/#gen-5x6-random-org-table-below">Gen 5x6 random org table below</a></li>
+<li><a href="/posts/playground/#gen-5x6-random-org-table-below">Gen 5x6 random org table below</a></li>
+<li><a href="/posts/playground/#gnuplot-example">Gnuplot Example</a></li>
+<li><a href="/posts/playground/#gen-random-inline-latex-formulas-below">Gen random inline latex formulas below</a></li>
+<li><a href="/posts/playground/#generate-a-5x8-latex-matrix-non-inlined-below-filled-with-random-numbers-and-letters">Generate a 5x8 latex matrix non-inlined below, filled with random numbers and letters</a></li>
+<li><a href="/posts/playground/#org-table-plot">Org Table Plot</a></li>
+<li><a href="/posts/playground/#index">Index</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<h2 id="another-heading">Another Heading</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">block belongs to head
+</span></span></code></pre></div><dl>
+<dt>item2</dt>
+<dd>level1
+<ul>
+<li>
+<p>nested
+<a id="code-snippet--qqq"></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;???&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">test</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;another print&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+</ul>
+</dd>
+<dt>head4</dt>
+<dd>4
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">block inline of list item
+</span></span></code></pre></div></dd>
+<dt>head5</dt>
+<dd>5</dd>
+<dt>it</dt>
+<dd>?</dd>
+<dt>item3</dt>
+<dd>3</dd>
+<dt>item6</dt>
+<dd>this is six-th item
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;...&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">...
+</span></span></code></pre></div></dd>
+</dl>
+<h2 id="gen-a-3x3-latex-matrix-filled-with-random-formulas-not-too-small">Gen a 3x3 latex matrix, filled with random formulas, not too small</h2>
+<p>Here is a 3x3 LaTeX matrix filled with random formulas:</p>]]></summary>
+    </entry>
+    <entry>
+        
+        <category term="posts" />
+        
+            
+            <category term="Tag1" x="y" />
+            
+        
+        <link rel="alternate" type="type/html" href="https://example.org/posts/my-first-post/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[My first post]]></title>
+        
+        
+        
+        <published>2025-03-16T00:00:00+08:00</published>
+        <updated>2025-03-17T00:00:00+08:00</updated>
+        <id>urn:uuid:0929a9da-d0f6-5151-b939-94b1768d9590</id>
+        
+                <author>
+                    <name>owl</name>
+                </author>
+        
+        <summary type="html"><![CDATA[<p>This is my post body</p>]]></summary>
+    </entry>
+</feed>
